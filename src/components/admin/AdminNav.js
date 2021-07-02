@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   };
 
   const FindClick = (index) => {
-    console.log(index)
+   
     if(index=="Dashboard"){
       setTitle("Admin Dashboard")
       setBarcolour({background: 'linear-gradient(to right, #ff3300 0%, #ff5050 100%'})

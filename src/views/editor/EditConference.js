@@ -69,7 +69,6 @@ const EditConference = (props) => {
            
         }
 
-        console.log(conference)
 
         API.put("/conference/update", conference)
             .then();

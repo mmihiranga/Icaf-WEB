@@ -122,7 +122,6 @@ const  ManageConference=()=> {
     // }
 
     const deleteConf = (row)=>{
-        console.log(row._id)
         confirmAlert({
             title: 'Confirm to Delete',
             message: 'Are you sure to delete this Conference.',
