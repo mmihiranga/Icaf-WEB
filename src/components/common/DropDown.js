@@ -37,7 +37,9 @@ const DropDown = ()=>{
     const goToManageConference =()=>{
         history.push(`/editor`);
     }
-
+    const  goToAdminDashboard =()=>{
+        history.push(`/admin`);
+    }
    
     if(userType==="user"){
         return(
@@ -65,6 +67,15 @@ const DropDown = ()=>{
         return(
             <div>
                 <DropdownItem onClick={goToManageConference}>Manage Conference</DropdownItem>
+                <DropdownItem divider/>
+                <DropdownItem onClick={logOut}>LogOut</DropdownItem>
+            </div>
+        );
+    }
+    else if(userType==="admin"){
+        return(
+            <div>
+                <DropdownItem onClick={goToAdminDashboard}>Admin Dashboard</DropdownItem>
                 <DropdownItem divider/>
                 <DropdownItem onClick={logOut}>LogOut</DropdownItem>
             </div>
