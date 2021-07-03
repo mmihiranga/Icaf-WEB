@@ -15,13 +15,14 @@ const PaymentForm =() =>{
     const history = useHistory();
     const location = useLocation();
     const alert = useAlert();
+
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/");
+                history.replace("/login");
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
     }, []);
 
@@ -51,29 +52,29 @@ const PaymentForm =() =>{
                 <Form className="conference-from" onSubmit={handleRegistration}>
                     <h3 className="header">ICAF Payment Service</h3>
                     <hr/>
-                    <div className="mb-1">
-                        <label htmlFor="name" className="form-label">Name on Card :</label>
-                        <Input type="text" size="sm" className="form-control" id="name" name="name" required/>
+                    <div>
+                        <label htmlFor="name">Name on Card :</label>
+                        <Input type="text" size="sm" id="name" name="name" required/>
                     </div>
-                    <div className="mb-1">
-                        <label htmlFor="amount" className="form-label">Amount :</label>
-                        <Input type="text" size="sm" className="form-control" value="LKR 4500.00" id="amount" name="amount" required disabled/>
+                    <div>
+                        <label htmlFor="amount">Amount :</label>
+                        <Input type="text" size="sm" value="LKR 4500.00" id="amount" name="amount" required disabled/>
                     </div>
-                    <div className="mb-1">
-                        <label htmlFor="cardNumber" className="form-label">Card Number :</label>
-                        <Input type="text" size="sm" className="form-control" id="cardNumber" name="amount" required/>
+                    <div>
+                        <label htmlFor="cardNumber">Card Number :</label>
+                        <Input type="text" size="sm" id="cardNumber" name="amount" required/>
                     </div>
                     <div className="row">
                         <div className="col-8">
-                            <div className="mb-1">
-                                <label htmlFor="date" className="form-label">Expire Date :</label>
-                                <Input type="date" size="sm" className="form-control" id="date" name="amount" required/>
+                            <div>
+                                <label>Expire Date :</label>
+                                <Input type="date" size="sm" name="amount" required/>
                             </div>
                         </div>
                         <div className="col-4">
-                            <div className="mb-1">
-                                <label htmlFor="cvc" className="form-label">CVC :</label>
-                                <Input type="text" size="sm" className="form-control" id="cvc" name="amount" required/>
+                            <div >
+                                <label htmlFor="cvc">CVC :</label>
+                                <Input type="text" size="sm"id="cvc" name="amount" required/>
                             </div>
                         </div>
                     </div>

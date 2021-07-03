@@ -19,11 +19,11 @@ const ManageResearches = () => {
         if(token != null){
             if(token.type!=="reviewer"){
                 if(token.type!=="admin"){
-                    history.replace("/");
+                    history.replace("/login");
                 }
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
         API.get(`/research/`)
             .then(res => {

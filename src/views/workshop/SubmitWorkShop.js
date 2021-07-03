@@ -16,10 +16,10 @@ const SubmitWorkshop = () => {
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/");
+                history.replace("/login");
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
     }, []);
     let fileData = null;
@@ -101,11 +101,8 @@ const SubmitWorkshop = () => {
                     <FormGroup>
                         <Label>Proposal :</Label>
                         <Input type="file" name="proposal" encType="multipart/form-data" onChange={handleData} required/>
-                        <FormText color="muted">
-                            This is some placeholder block-level help text for the above input.
-                            It's a bit lighter and easily wraps to a new line.
-                        </FormText>
                     </FormGroup>
+                    <br/>
                     <Button color="secondary" size="lg">Submit</Button>
                 </Form>
             </div>

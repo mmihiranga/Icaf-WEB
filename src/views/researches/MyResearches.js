@@ -18,10 +18,10 @@ const MyResearches = () => {
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/");
+                history.replace("/login");
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
         API.get(`/research/${userId}`)
             .then(res => {

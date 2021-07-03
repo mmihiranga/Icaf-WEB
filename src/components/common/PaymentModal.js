@@ -13,6 +13,7 @@ const PaymentModal = (props) => {
         event.preventDefault();
         API.patch("/research/update/payment/"+props.row._id)
             .then();
+        window.location.reload();
     }
 
     return (
@@ -23,28 +24,28 @@ const PaymentModal = (props) => {
                     <h3 className="header">ICAF Payment Service</h3>
                     <hr/>
                     <div className="mb-1">
-                        <label htmlFor="name" className="form-label">Name on Card :</label>
-                        <Input type="text" size="sm" className="form-control" id="name" name="name" required/>
+                        <label htmlFor="name">Name on Card :</label>
+                        <Input type="text" size="sm" id="name" name="name" required/>
                     </div>
                     <div className="mb-1">
-                        <label htmlFor="amount" className="form-label">Amount :</label>
-                        <Input type="text" size="sm" className="form-control" value="LKR 3000.00" id="amount" name="amount" required disabled/>
+                        <label htmlFor="amount" >Amount :</label>
+                        <Input type="text" size="sm"  value="LKR 3000.00" id="amount" name="amount" required disabled/>
                     </div>
                     <div className="mb-1">
-                        <label htmlFor="cardNumber" className="form-label">Card Number :</label>
-                        <Input type="text" size="sm" className="form-control" id="cardNumber" name="amount" required/>
+                        <label htmlFor="cardNumber">Card Number :</label>
+                        <Input type="text" size="sm" id="cardNumber" name="amount" required/>
                     </div>
                     <div className="row">
                         <div className="col-8">
-                            <div className="mb-1">
-                                <label htmlFor="date" className="form-label">Expire Date :</label>
-                                <Input type="date" size="sm" className="form-control" id="date" name="amount" required/>
+                            <div>
+                                <label>Expire Date :</label>
+                                <Input type="date" size="sm" name="amount" required/>
                             </div>
                         </div>
                         <div className="col-4">
                             <div className="mb-1">
-                                <label htmlFor="cvc" className="form-label">CVC :</label>
-                                <Input type="text" size="sm" className="form-control" id="cvc" name="amount" required/>
+                                <label htmlFor="cvc">CVC :</label>
+                                <Input type="text" size="sm" id="cvc" name="amount" required/>
                             </div>
                         </div>
                     </div>

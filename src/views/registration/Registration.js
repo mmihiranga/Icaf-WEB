@@ -16,10 +16,10 @@ const Registration =()=>{
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/");
+                history.replace("/login");
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
 
         API.get(`/conference/`)
@@ -34,7 +34,7 @@ const Registration =()=>{
     return (
         <div>
             <Header/>
-            <Title title="WORKSHOPS"/>
+            <Title title="CONFERENCE"/>
             {rows.length > 0 && rows.map(row => {
                 if (row.status === "approved") {
                     count++;

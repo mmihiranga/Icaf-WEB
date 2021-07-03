@@ -30,7 +30,7 @@ input[type=radio] {
 }
 
 label.radio {
-	cursor: pointer;
+  cursor: pointer;
   text-indent: 35px;
   overflow: visible;
   display: inline-block;

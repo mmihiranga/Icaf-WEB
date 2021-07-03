@@ -23,10 +23,10 @@ const SubmitResearch =()=>{
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/");
+                history.replace("/login");
             }
         }else{
-            history.replace("/");
+            history.replace("/login");
         }
     }, []);
     const updateFile = (formData) =>{
@@ -95,11 +95,8 @@ const SubmitResearch =()=>{
                     </FormGroup>
                     <FormGroup>
                         <Input type="file" name="proposal" enctype="multipart/form-data"  onChange={handleData} required/>
-                        <FormText color="muted">
-                            This is some placeholder block-level help text for the above input.
-                            It's a bit lighter and easily wraps to a new line.
-                        </FormText>
                     </FormGroup>
+                    <br/>
                     <Button color="secondary" size="lg">Submit</Button>
                 </Form>
             </div>

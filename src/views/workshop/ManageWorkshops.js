@@ -19,7 +19,7 @@ const ManageWorkshops = () => {
         if(token != null){
             if(token.type!=="reviewer"){
                 if(token.type!=="admin"){
-                    history.replace("/");
+                    history.replace("/login");
                 }
             }
         }else{
