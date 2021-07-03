@@ -86,7 +86,7 @@ const ManageDownloads = () => {
                
             </div>
               {
-                      addDoc ?   <AddDocument/> : <DownloadTable rows={rows} status={status}/>  
+                      addDoc ?   history.push("/admin/download/adddocuments") : <DownloadTable rows={rows} status={status}/>  
               }
               <br/><br/><br/><br/>
         </div>

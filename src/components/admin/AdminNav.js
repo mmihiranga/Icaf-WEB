@@ -17,6 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
 import PaymentIcon from '@material-ui/icons/Payment';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PersonIcon from '@material-ui/icons/Person';
@@ -230,7 +231,11 @@ const useStyles = makeStyles((theme) => ({
         history.push("/login");
         // window.location.reload();
     
-  }
+  }else if(index=="Home"){
+
+    history.push("/home");
+
+}
   };
 
 
@@ -343,9 +348,9 @@ const useStyles = makeStyles((theme) => ({
         <Divider />
         <List>
 
-          <ListItem button onClick={() => FindClick("Email")} style={ClickIcon8 ? {} : { background: "#636363", color: "white"}}>
-            <ListItemIcon>  <MailIcon style={ClickIcon8 ? {} :{ color: "white" }}/></ListItemIcon>
-            <ListItemText primary={"Email"} />
+          <ListItem button onClick={() => FindClick("Home")} style={ClickIcon8 ? {} : { background: "#636363", color: "white"}}>
+            <ListItemIcon>  <HomeIcon style={ClickIcon8 ? {} :{ color: "white" }}/></ListItemIcon>
+            <ListItemText primary={"Home"} />
           </ListItem>
           <ListItem button onClick={() => FindClick("logout")}>
             <ListItemIcon>  <ExitToAppIcon style={{ color: "#fa4661" }}/></ListItemIcon>

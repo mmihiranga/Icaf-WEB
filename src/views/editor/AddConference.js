@@ -106,8 +106,9 @@ return (
                 <label id="icon" for="name"><SupervisorAccountRoundedIcon/></label>
                 <input className="conf-input" type="text" name="name" id="name" placeholder="Organizers" {...register("organizers")} required/><br/>
 
-                
-                <button type="submit" className="addConf-but">Save</button>
+                <div data-testid="button">
+                <button type="submit"  className="addConf-but">Save</button>
+                </div>
                 </form>
                 </div>
                 </div>

@@ -13,7 +13,7 @@ import {confirmAlert} from "react-confirm-alert";
 
 const AddDocument = () => {
     const {register, handleSubmit} = useForm();
-    let {option, setOption} = useState();
+    let {option, setOption} = useState("Workshop Templates");
 
    
     const history = useHistory();
@@ -70,7 +70,11 @@ const AddDocument = () => {
                         {
                             label: 'OK',
                             onClick: () => {
+                                if(token.type=="admin"){
+                                history.push("/admin")
+                            }else{
                                 history.push("/editor")
+                            }
                             }
                         },
                         
