@@ -19,7 +19,7 @@ const ManageResearches = () => {
         if(token != null){
             if(token.type!=="reviewer"){
                 if(token.type!=="admin"){
-                    history.replace("/login");
+                    history.replace("/");
                 }
             }
         }else{

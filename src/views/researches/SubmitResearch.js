@@ -22,9 +22,7 @@ const SubmitResearch =()=>{
     }
     useEffect(() => {
         if(token != null){
-            if(token.type!=="user"){
-                history.replace("/login");
-            }
+
         }else{
             history.replace("/login");
         }

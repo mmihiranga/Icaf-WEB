@@ -15,9 +15,7 @@ const SubmitWorkshop = () => {
     const token = JSON.parse(sessionStorage.getItem("token"));
     useEffect(() => {
         if(token != null){
-            if(token.type!=="user"){
-                history.replace("/login");
-            }
+
         }else{
             history.replace("/login");
         }

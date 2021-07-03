@@ -15,13 +15,10 @@ const Registration =()=>{
     const history = useHistory();
     useEffect(() => {
         if(token != null){
-            if(token.type!=="user"){
-                history.replace("/login");
-            }
+
         }else{
             history.replace("/login");
         }
-
         API.get(`/conference/`)
             .then(res => {
                 setRows(res.data)

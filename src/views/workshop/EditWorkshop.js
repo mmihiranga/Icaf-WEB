@@ -18,7 +18,7 @@ const EditModal = (props) => {
     useEffect(() => {
         if(token != null){
             if(token.type!=="user"){
-                history.replace("/login");
+                history.replace("/");
             }
         }else{
             history.replace("/login");
