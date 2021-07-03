@@ -10,6 +10,8 @@ import Footer from "../../components/footer/Footer";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import EditConference from './EditConference';
 import "../../conferenceStyles.css";
+import Title from "../../components/header/Title";
+
 const token =JSON.parse(sessionStorage.getItem("token"));
 
 const  ManageConference=()=> {
@@ -175,11 +177,12 @@ const  ManageConference=()=> {
         <div>
         <div className="manageConfBack">
             {head ? <Header/>: null}
+            <Title title="Editor Dashboard"/>
  
  <br/><br/><br/><br/>
             <div>
            {/* <EditConference/> */}
-                <div className="wr-table">
+                {/* <div className="wr-table">
                     <div className="wr-table-header">
                         <Row>
                             <Col className="wr-dashboard-header">
@@ -202,7 +205,7 @@ const  ManageConference=()=> {
                         </Row>
                     </div>
                     <br/>
-                </div>
+                </div> */}
 
             </div>
 

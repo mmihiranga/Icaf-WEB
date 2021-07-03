@@ -151,14 +151,14 @@ const WorkshopTable = (props) => {
                                     <StyledTableCell style={{width: "11%"}} align="left">{new Date(row.submitDate).toUTCString()}</StyledTableCell>
                                     <StyledTableCell style={{width: "2%"}} align="left">
                                         {
-                                            token.type === "reviewer" ?
+                                            token.type === "reviewer" ||  token.type === "admin"?
                                                 (row.approvalStatus!=="approved" ? (<Button color="primary" onClick={()=>{ApproveWorkshop(row._id)}}>Approve</Button>):(<Button color="primary" disabled>Approve</Button>))
                                                 :(<EditWorkshop row={row}/>)
                                         }
                                     </StyledTableCell>
                                     <StyledTableCell style={{width: "2%"}} align="left">
                                         {
-                                            token.type === "reviewer" ? (row.approvalStatus!=="rejected" ?(<Button color="warning" onClick={()=>{RejectWorkshop(row._id)}}>Reject</Button>):(<Button color="warning" disabled>Reject</Button>)):(<Button onClick={() => {deleteWorkshop(row._id)}} color="warning">Delete</Button>)
+                                            token.type === "reviewer" ||  token.type === "admin" ? (row.approvalStatus!=="rejected" ?(<Button color="warning" onClick={()=>{RejectWorkshop(row._id)}}>Reject</Button>):(<Button color="warning" disabled>Reject</Button>)):(<Button onClick={() => {deleteWorkshop(row._id)}} color="warning">Delete</Button>)
                                         }
                                     </StyledTableCell>
                                 </StyledTableRow>

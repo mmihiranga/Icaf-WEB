@@ -151,7 +151,7 @@ const ResearchTable = (props) => {
                                     <StyledTableCell style={{width: "10%"}} align="left">{row.paymentStatus}</StyledTableCell>
                                     <StyledTableCell style={{width: "5%"}} align="left">
                                     {
-                                        token.type === "reviewer" ?
+                                        token.type === "reviewer" ||  token.type === "admin" ?
                                             (row.approvalStatus!=="approved" ? (<Button color="primary" onClick={()=>{ApproveResearch(row._id)}}>Approve</Button>):(<Button color="primary" disabled>Approve</Button>))
                                             :((row.approvalStatus === "approved" && row.paymentStatus === "pending") ?
                                                 <PaymentModal row={row}/>
@@ -161,7 +161,7 @@ const ResearchTable = (props) => {
                                     </StyledTableCell>
                                     <StyledTableCell style={{width: "5%"}} align="left">
                                         {
-                                            token.type === "reviewer" ? (row.approvalStatus!=="rejected" ?(<Button color="warning" onClick={()=>{RejectResearch(row._id)}}>Reject</Button>)
+                                            token.type === "reviewer" ||  token.type === "admin" ? (row.approvalStatus!=="rejected" ?(<Button color="warning" onClick={()=>{RejectResearch(row._id)}}>Reject</Button>)
                                                 :(<Button color="warning" disabled>Reject</Button>))
                                                 :(<Button onClick={() => {deleteResearch(row._id)}} color="warning">Delete</Button>)
                                         }

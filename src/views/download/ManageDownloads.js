@@ -76,7 +76,7 @@ const ManageDownloads = () => {
                 <br/>
                 <div>
                 {
-                      addDoc ?   <Button className='addconf-btn' variant="primary" onClick={() => backDocs()} >Back</Button> : <Button className='addconf-btn1' variant="primary" onClick={() => addDocs()} >Add Conference</Button>
+                      addDoc ?   <Button className='addconf-btn' variant="primary" onClick={() => backDocs()} >Back</Button> : <Button className='addconf-btn1' variant="primary" onClick={() => addDocs()} >Add Templates</Button>
               }
               
               
